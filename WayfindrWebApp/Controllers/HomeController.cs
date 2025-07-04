@@ -40,5 +40,14 @@ namespace WayfindrWebApp.Controllers
 
         [Route("roadmap")]
         public IActionResult Roadmap() => View();
+
+        [Route("register")]
+        public IActionResult Register() => View();
+
+        [Route("login")]
+        public IActionResult Login() => View();
+
+        [Route("profile")]
+        public IActionResult Profile() => View();
     }
 }

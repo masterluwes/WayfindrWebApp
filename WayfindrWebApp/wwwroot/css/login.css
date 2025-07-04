@@ -1,0 +1,252 @@
+.login {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login .div {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 936px;
+  position: relative;
+}
+
+.login .img {
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  top: 29px;
+  left: 40px;
+  object-fit: cover;
+}
+
+.login .text-wrapper {
+  position: absolute;
+  width: 474px;
+  top: 39px;
+  left: 134px;
+  font-family: "IBM Plex Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .overlap-group {
+  position: absolute;
+  width: 679px;
+  height: 936px;
+  top: 0;
+  left: 802px;
+  background-image: url(./img/rectangle-30-1.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.login .loginbgfinal {
+  position: absolute;
+  width: 552px;
+  height: 695px;
+  top: 144px;
+  left: 63px;
+}
+
+.login .text-wrapper-2 {
+  position: absolute;
+  width: 472px;
+  top: 223px;
+  left: 87px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .text-wrapper-3 {
+  position: absolute;
+  width: 562px;
+  top: 167px;
+  left: 87px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.login .text-wrapper-4 {
+  position: absolute;
+  width: 472px;
+  top: 317px;
+  left: 87px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .rectangle {
+  position: absolute;
+  width: 599px;
+  height: 55px;
+  top: 360px;
+  left: 87px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.login .text-wrapper-5 {
+  position: absolute;
+  width: 472px;
+  top: 459px;
+  left: 87px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .rectangle-2 {
+  position: absolute;
+  width: 599px;
+  height: 55px;
+  top: 502px;
+  left: 87px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.login .overlap {
+  position: absolute;
+  width: 564px;
+  height: 28px;
+  top: 567px;
+  left: 122px;
+}
+
+.login .text-wrapper-6 {
+  position: absolute;
+  width: 166px;
+  top: 2px;
+  left: 398px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #05347e;
+  font-size: 20px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .text-wrapper-7 {
+  position: absolute;
+  width: 472px;
+  top: 0;
+  left: 0;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .rectangle-3 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 571px;
+  left: 87px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.login .overlap-2 {
+  position: absolute;
+  width: 472px;
+  height: 26px;
+  top: 771px;
+  left: 151px;
+}
+
+.login .dont-have-an-account {
+  position: absolute;
+  width: 472px;
+  top: 0;
+  left: 0;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: transparent;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .span {
+  color: #000000;
+}
+
+.login .text-wrapper-8 {
+  color: #05347e;
+}
+
+.login .overlap-3 {
+  position: absolute;
+  width: 599px;
+  height: 71px;
+  top: 673px;
+  left: 87px;
+  background-color: #479ef9;
+  border-radius: 10px;
+}
+
+.login .text-wrapper-9 {
+  position: absolute;
+  width: 562px;
+  top: 12px;
+  left: 19px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .rectangle-4 {
+  position: absolute;
+  width: 599px;
+  height: 71px;
+  top: 0;
+  left: 0;
+  background-color: #479ef9;
+  border-radius: 10px;
+}
+
+.rectangle,
+.rectangle-2 {
+  padding-left: 16px; /* Adds internal space on the left */
+  font-size: 18px
+  
+}
+
+.rectangle::placeholder,
+.rectangle-2::placeholder {
+  font-size: 18px; /* or any size you want */
+  color: #999; /* optional: change placeholder color */
+}

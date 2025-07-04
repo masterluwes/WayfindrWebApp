@@ -1,0 +1,231 @@
+.register {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.register .div {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 936px;
+  position: relative;
+}
+
+.register .overlap {
+  position: absolute;
+  width: 679px;
+  height: 936px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/rectangle-30-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.register .loginbgfinal {
+  position: absolute;
+  width: 615px;
+  height: 526px;
+  top: 205px;
+  left: 32px;
+}
+
+.register .text-wrapper {
+  position: absolute;
+  width: 472px;
+  top: 854px;
+  left: 831px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .overlap-group {
+  position: absolute;
+  width: 599px;
+  height: 71px;
+  top: 759px;
+  left: 767px;
+  background-color: #479ef9;
+  border-radius: 10px;
+}
+
+.register .text-wrapper-2 {
+  position: absolute;
+  width: 562px;
+  top: 12px;
+  left: 19px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .img {
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  top: 28px;
+  left: 720px;
+  object-fit: cover;
+}
+
+.register .text-wrapper-3 {
+  position: absolute;
+  width: 474px;
+  top: 48px;
+  left: 830px;
+  font-family: "IBM Plex Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .text-wrapper-4 {
+  position: absolute;
+  width: 562px;
+  top: 132px;
+  left: 767px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .text-wrapper-5 {
+  position: absolute;
+  width: 472px;
+  top: 194px;
+  left: 767px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .text-wrapper-6 {
+  position: absolute;
+  width: 472px;
+  top: 270px;
+  left: 767px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .rectangle {
+  top: 313px;
+  position: absolute;
+  width: 592px;
+  height: 55px;
+  left: 767px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.register .text-wrapper-7 {
+  position: absolute;
+  width: 472px;
+  top: 387px;
+  left: 767px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .rectangle-2 {
+  top: 430px;
+  position: absolute;
+  width: 592px;
+  height: 55px;
+  left: 767px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.register .text-wrapper-8 {
+  position: absolute;
+  width: 472px;
+  top: 504px;
+  left: 767px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .rectangle-3 {
+  top: 547px;
+  position: absolute;
+  width: 592px;
+  height: 55px;
+  left: 767px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.register .text-wrapper-9 {
+  position: absolute;
+  width: 472px;
+  top: 621px;
+  left: 767px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.register .rectangle-4 {
+  top: 664px;
+  position: absolute;
+  width: 592px;
+  height: 55px;
+  left: 767px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e73;
+}
+
+.rectangle,
+.rectangle-2,
+.rectangle-3,
+.rectangle-4 {
+  padding-left: 16px; /* Adds internal space on the left */
+  font-size: 18px; /* Font size of the input text */
+}
+
+.rectangle::placeholder,
+.rectangle-2::placeholder,
+.rectangle-3::placeholder,
+.rectangle-4::placeholder {
+  font-size: 18px; /* Same as input text for consistency */
+  color: #999; /* Subtle color for placeholder text */
+}
