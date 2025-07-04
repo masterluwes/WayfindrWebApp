@@ -72,9 +72,10 @@
 
                 // Redirect to homepage or dashboard
                 window.location.href = "/";
-            } else {
-                alert("Invalid email or password.");
-            }
+            } 
+            // else {
+            //     alert("Invalid email or password.");
+            // }
         });
     </script>
     <script>
@@ -88,7 +89,7 @@
 
             if (user) {
                 localStorage.setItem("currentUser", email); // Set current user
-                window.location.href = "/profile"; // Redirect to profile
+                window.location.href = "/"; // Redirect to profile
             } else {
                 alert("Invalid credentials.");
             }
