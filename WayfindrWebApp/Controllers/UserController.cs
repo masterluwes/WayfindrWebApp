@@ -26,7 +26,7 @@ namespace WayfindrWebApp.Controllers
             if (user == null)
                 return NotFound();
 
-            return View(user); // loads Views/User/Profile.cshtml
+            return View("~/Views/Home/Profile.cshtml", user); // loads Views/User/Profile.cshtml
         }
 
         [HttpPost]

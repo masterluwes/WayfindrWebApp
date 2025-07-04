@@ -35,21 +35,18 @@
                        accept="image/png, image/jpeg"
                        style="display: none" />
             </div>
-            <form asp-action="Save" asp-controller="User" method="post" enctype="multipart/form-data">
-                <input type="hidden" asp-for="UserId" />
+            <form id="profileForm">
                 <div class="overlap">
                     <div class="text-wrapper-3">Profile Information</div>
 
-                    
-
                     <div class="text-wrapper-4">First Name</div>
-                    <input asp-for="FirstName" class="rectangle-3" placeholder="Enter First Name" />
+                    <input id="firstName" class="rectangle-3" placeholder="Enter First Name" />
 
                     <div class="text-wrapper-5">Username</div>
-                    <input asp-for="Username" class="rectangle-5" placeholder="Enter Username" />
+                    <input id="username" class="rectangle-5" placeholder="Enter Username" />
 
                     <div class="text-wrapper-6">Gender</div>
-                    <select asp-for="Gender" class="rectangle-6">
+                    <select id="gender" class="rectangle-6">
                         <option value="">Select Gender</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -58,21 +55,21 @@
                     </select>
 
                     <div class="text-wrapper-7">Last Name</div>
-                    <input asp-for="LastName" class="rectangle-4" placeholder="Enter Last Name" />
+                    <input id="lastName" class="rectangle-4" placeholder="Enter Last Name" />
 
                     <div class="text-wrapper-8">Contact Information</div>
 
                     <div class="text-wrapper-9">Email</div>
-                    <input asp-for="Email" type="email" class="rectangle-7" placeholder="Enter Email" />
+                    <input id="email" type="email" class="rectangle-7" placeholder="Enter Email" />
 
                     <div class="text-wrapper-10">New Password</div>
-                    <input asp-for="PasswordHash" type="password" class="rectangle-9" placeholder="Enter New Password" value="" />
+                    <input id="password" type="password" class="rectangle-9" placeholder="Enter New Password" value="" />
 
                     <div class="text-wrapper-11">Confirm New Password</div>
-                    <input type="password" class="rectangle-10" placeholder="Confirm Password" value="" />
+                    <input id="confirmPassword" type="password" class="rectangle-10" placeholder="Confirm Password" value="" />
 
                     <div class="text-wrapper-12">Contact Number</div>
-                    <input asp-for="ContactNumber" type="tel" class="rectangle-8" placeholder="Enter Contact Number" />
+                    <input id="contactNumber" type="tel" class="rectangle-8" placeholder="Enter Contact Number" />
                 </div>
 
                 <div class="div-wrapper">
@@ -107,3 +104,69 @@
 
 </body>
 </html>
+<script>
+    document.getElementById("profileForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent page reload
+
+        // Store values in localStorage
+        const fields = ["firstName", "username", "gender", "lastName", "email", "contactNumber"];
+        fields.forEach(id => {
+            const value = document.getElementById(id).value;
+            localStorage.setItem(id, value);
+        });
+
+        // Clear password fields
+        document.getElementById("password").value = "";
+        document.getElementById("confirmPassword").value = "";
+
+        // Optional: Feedback
+        alert("Data Successfully Saved.");
+    });
+
+    // On load, fill fields from localStorage
+    window.onload = function () {
+        const fields = ["firstName", "username", "gender", "lastName", "email", "contactNumber"];
+        fields.forEach(id => {
+            const saved = localStorage.getItem(id);
+            if (saved) {
+                document.getElementById(id).value = saved;
+            }
+        });
+    };
+</script>
+
+<script>
+    // Handle photo upload preview
+    document.getElementById("upload-input").addEventListener("change", function () {
+        const file = this.files[0];
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                // Set the preview image src
+                document.getElementById("profile-picture").src = e.target.result;
+
+                // Save image to localStorage as base64
+                localStorage.setItem("profilePicture", e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // On load, restore profile picture from localStorage
+    window.onload = function () {
+        // Load saved profile info
+        const fields = ["firstName", "username", "gender", "lastName", "email", "contactNumber"];
+        fields.forEach(id => {
+            const saved = localStorage.getItem(id);
+            if (saved) {
+                document.getElementById(id).value = saved;
+            }
+        });
+
+        // Load saved profile picture
+        const savedPic = localStorage.getItem("profilePicture");
+        if (savedPic) {
+            document.getElementById("profile-picture").src = savedPic;
+        }
+    };
+</script>
