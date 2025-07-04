@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model WayfindrWebApp.Models.User
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,59 +35,50 @@
                        accept="image/png, image/jpeg"
                        style="display: none" />
             </div>
-            <div class="overlap">
-                <div class="text-wrapper-3">Profile Information</div>
+            <form asp-action="Save" asp-controller="User" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="UserId" />
+                <div class="overlap">
+                    <div class="text-wrapper-3">Profile Information</div>
 
-                <!-- First Name -->
-                <div class="text-wrapper-4">First Name</div>
-                <input type="text"
-                       class="rectangle-3"
-                       placeholder="Enter First Name" />
+                    
 
-                <!-- Username -->
-                <div class="text-wrapper-5">Username</div>
-                <input type="text" class="rectangle-5" placeholder="Enter Username" />
+                    <div class="text-wrapper-4">First Name</div>
+                    <input asp-for="FirstName" class="rectangle-3" placeholder="Enter First Name" />
 
-                <!-- Gender -->
-                <div class="text-wrapper-6">Gender</div>
-                <select class="rectangle-6">
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                    <option value="prefer-not-to-say">Prefer not to say</option>
-                </select>
+                    <div class="text-wrapper-5">Username</div>
+                    <input asp-for="Username" class="rectangle-5" placeholder="Enter Username" />
 
-                <!-- Last Name -->
-                <div class="text-wrapper-7">Last Name</div>
-                <input type="text"
-                       class="rectangle-4"
-                       placeholder="Enter Last Name" />
+                    <div class="text-wrapper-6">Gender</div>
+                    <select asp-for="Gender" class="rectangle-6">
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                        <option>Prefer not to say</option>
+                    </select>
 
-                <div class="text-wrapper-8">Contact Information</div>
+                    <div class="text-wrapper-7">Last Name</div>
+                    <input asp-for="LastName" class="rectangle-4" placeholder="Enter Last Name" />
 
-                <!-- Email -->
-                <div class="text-wrapper-9">Email</div>
-                <input type="email" class="rectangle-7" placeholder="Enter Email" />
+                    <div class="text-wrapper-8">Contact Information</div>
 
-                <!-- New Password -->
-                <div class="text-wrapper-10">New Password</div>
-                <input type="password"
-                       class="rectangle-9"
-                       placeholder="Enter New Password" />
+                    <div class="text-wrapper-9">Email</div>
+                    <input asp-for="Email" type="email" class="rectangle-7" placeholder="Enter Email" />
 
-                <!-- Confirm New Password -->
-                <div class="text-wrapper-11">Confirm New Password</div>
-                <input type="password"
-                       class="rectangle-10"
-                       placeholder="Confirm Password" />
+                    <div class="text-wrapper-10">New Password</div>
+                    <input asp-for="PasswordHash" type="password" class="rectangle-9" placeholder="Enter New Password" value="" />
 
-                <!-- Contact Number -->
-                <div class="text-wrapper-12">Contact Number</div>
-                <input type="tel"
-                       class="rectangle-8"
-                       placeholder="Enter Contact Number" />
-            </div>
+                    <div class="text-wrapper-11">Confirm New Password</div>
+                    <input type="password" class="rectangle-10" placeholder="Confirm Password" value="" />
+
+                    <div class="text-wrapper-12">Contact Number</div>
+                    <input asp-for="ContactNumber" type="tel" class="rectangle-8" placeholder="Enter Contact Number" />
+                </div>
+
+                <div class="div-wrapper">
+                    <button type="submit" class="text-wrapper-17">Save</button>
+                </div>
+            </form>
 
             <div class="text-wrapper-13">Current Stats</div>
             <div class="text-wrapper-14">Assessment/s:</div>
@@ -94,7 +87,7 @@
             <div class="no-of-assessments">{no-of-assessments}</div>
             <div class="date">{date}</div>
             <div class="current-career">{current career}</div>
-            <div class="div-wrapper"><div class="text-wrapper-17">Save</div></div>
+            
             <a href="index">
                 <div class="overlap-2">
                     <div class="text-wrapper-18">Back</div>
@@ -104,7 +97,13 @@
                 <div class="text-wrapper-19">Logout</div>
             </a>
         </div>
+        @if (TempData["Message"] != null)
+        {
+            <div class="success-message">@TempData["Message"]</div>
+        }
+
     </div>
     @Html.Partial("_Footer")
+
 </body>
 </html>

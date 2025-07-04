@@ -13,10 +13,14 @@ namespace WayfindrWebApp.Controllers
             _context = context;
         }
 
+        // ✅ PLACE THIS METHOD HERE (GET: /User/Profile/{id})
         public IActionResult Profile(int id)
         {
             var user = _context.Users.FirstOrDefault(u => u.UserId == id);
-            return View(user);
+            if (user == null)
+                return NotFound();
+
+            return View(user); // will load Views/User/Profile.cshtml with the user data
         }
 
         [HttpPost]
@@ -24,9 +28,26 @@ namespace WayfindrWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                user.LastModified = DateTime.Now;
-                _context.Users.Update(user);
-                _context.SaveChanges();
+                var existingUser = _context.Users.FirstOrDefault(u => u.UserId == user.UserId);
+                if (existingUser != null)
+                {
+                    existingUser.FirstName = user.FirstName;
+                    existingUser.LastName = user.LastName;
+                    existingUser.Email = user.Email;
+                    existingUser.Gender = user.Gender;
+                    existingUser.ContactNumber = user.ContactNumber;
+                    existingUser.Username = user.Username;
+                    existingUser.LastModified = DateTime.Now;
+
+                    if (!string.IsNullOrEmpty(user.PasswordHash))
+                    {
+                        existingUser.PasswordHash = user.PasswordHash;
+                    }
+
+                    _context.SaveChanges();
+                    TempData["Message"] = "Profile updated successfully!";
+                }
+
                 return RedirectToAction("Profile", new { id = user.UserId });
             }
 
