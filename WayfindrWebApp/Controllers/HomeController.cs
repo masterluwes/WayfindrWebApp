@@ -23,6 +23,21 @@ namespace WayfindrWebApp.Controllers
         [Route("career-paths")]
         public IActionResult CareerPaths() => View();
 
+        [Route("career-paths/employment")]
+        public IActionResult Employment() => View();
+
+        [Route("career-paths/education")]
+        public IActionResult Education() => View();
+
+        [Route("career-paths/vocational")]
+        public IActionResult Vocational() => View();
+
+        [Route("career-paths/freelancing")]
+        public IActionResult Freelancing() => View();
+
+        [Route("career-paths/gap-year")]
+        public IActionResult GapYear() => View();
+
         [Route("roadmap")]
         public IActionResult Roadmap() => View();
     }

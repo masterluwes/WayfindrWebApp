@@ -1,35 +1,85 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="~/img/Logo.png" />
     <link rel="stylesheet" href="~/css/globals.css" />
     <link rel="stylesheet" href="~/css/style.css" />
     <link rel="stylesheet" href="~/css/result.css" />
     <script src="~/js/include.js" defer></script>
-    <title>Wayfindr</title>
+    <title>Wayfindr - Result</title>
 </head>
 <body>
     @Html.Partial("_Header")
+
     <div class="test-result">
         <div class="overlap-group-wrapper">
             <div class="overlap-group">
                 <div class="rectangle"></div>
-                <p class="text-wrapper">Great Job on Completing Your Self-Assessment!</p>
-                <p class="you-ve-taken-an">
-                    You&#39;ve taken an important step toward planning your future. Based on your answers, you&#39;re now ready
-                    to explore the next phase of your journey.<br /><br />What’s next? Head over to the Career Paths section to
-                    discover the different opportunities available to you — whether it’s employment, college, training, or
-                    freelancing.<br /><br />Then, check out your Suggested Roadmap for practical steps tailored to your goals.
-                    Take your time, reflect, and remember: your path is yours to shape.
+                <p class="text-wrapper" id="resultTitle">Loading...</p>
+                <p class="you-ve-taken-an" id="resultMessage">
+                    Please wait while we determine your best-fit career path.
                 </p>
                 <div class="rounded-rectangle"></div>
-                <div class="div">Go to Career Paths</div>
+                <a class="div" id="goToCareerBtn" href="/career-paths">Go to Career Paths</a>
             </div>
         </div>
     </div>
+
     @Html.Partial("_Footer")
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const result = localStorage.getItem("assessmentResult");
+
+            const resultsMap = {
+                work: {
+                    title: "💼 You seem ready to join the workforce!",
+                    message: "Your answers show confidence, preparation, and motivation—great indicators that you're ready to take on a job. You’re goal-oriented and eager to apply what you’ve learned. It’s time to start polishing your resume, applying to job openings, and preparing for interviews. Head over to the “Employment” career path section to learn the steps toward landing your first job.",
+                    path: "/career-paths/employment"
+                },
+                study: {
+                    title: "🎓 Pursuing higher education may be your ideal next step.",
+                    message: "Your responses suggest a strong interest in learning more, gaining qualifications, and exploring your interests in depth. Whether it's university or a specialized program, this route will open doors to long-term career success. Visit the “Study” career path section for tips on school applications, scholarships, and finding the right course.",
+                    path: "/career-paths/study"
+                },
+                vocational: {
+                    title: "🛠️ You appear suited for a hands-on, skill-based learning path.",
+                    message: "Your answers suggest you're looking for practical, affordable options to kick-start your career quickly. Vocational training—like TESDA programs—can help you gain certifications and get hired faster. Check the “Vocational” career path section to explore the best short courses and tech-voc opportunities for you.",
+                    path: "/career-paths/vocational"
+                },
+                freelance: {
+                    title: "💻 You show signs of being an independent self-starter.",
+                    message: "Freelancing may be a great fit, especially if you value flexibility, remote work, and using creative or digital skills. You seem aware of the tools and mindset needed to work solo. Go to the “Freelancing” career path section to learn how to build your portfolio, find clients, and start earning online.",
+                    path: "/career-paths/freelancing"
+                },
+                gapYear: {
+                    title: "🌱 It’s completely okay to still be exploring.",
+                    message: "Your answers indicate you're not quite ready to jump into a specific path—and that’s valid. A gap year can help you reflect, gain life experience, and prepare emotionally or financially. Visit the “Gap Year” career path section for ideas on how to use this time meaningfully while planning your next move.",
+                    path: "/career-paths/gap-year"
+                }
+            };
+
+            if (result === "tie") {
+                document.getElementById("resultTitle").textContent = "🧭 You show potential in more than one direction!";
+                document.getElementById("resultMessage").textContent =
+                    "Your self-assessment results are evenly matched between multiple paths. That means you have diverse strengths and interests. Explore each career path section to reflect further and see what resonates most with you.";
+                document.getElementById("goToCareerBtn").href = "/career-paths";
+            } else if (result && resultsMap[result]) {
+                const r = resultsMap[result];
+                document.getElementById("resultTitle").textContent = r.title;
+                document.getElementById("resultMessage").textContent = r.message;
+                document.getElementById("goToCareerBtn").href = r.path;
+            } else {
+                document.getElementById("resultTitle").textContent = "We couldn’t determine your result.";
+                document.getElementById("resultMessage").textContent = "Please retake the self-assessment or contact support.";
+                document.getElementById("goToCareerBtn").href = "/career-paths";
+            }
+        });
+    </script>
 </body>
 </html>

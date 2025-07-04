@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <link rel="icon" type="img/png" href="~/img/Logo.png" />
     <link rel="stylesheet" href="~/css/globals.css" />
     <link rel="stylesheet" href="~/css/style.css" />
     <link rel="stylesheet" href="~/css/career-paths.css" />
@@ -19,14 +19,18 @@
             <p class="p">
                 Explore various career paths available to you and find one that aligns with your skills and interests.
             </p>
-            <div class="overlap-group">
-                <img class="rectangle" src="img/Job.png" />
-                <p class="text-wrapper-2">
-                    Starting a job or career immediately after graduation. This path focuses on gaining practical experience and
-                    income, whether in full-time, part-time, or entry-level roles.
-                </p>
-                <div class="text-wrapper-3">Employment</div>
-            </div>
+            <a href="career-paths/employment" class="overlap-group-link">
+                <div class="overlap-group">
+                    <img class="rectangle" src="img/Job.png" />
+                    <p class="text-wrapper-2">
+                        Starting a job or career immediately after graduation. This path
+                        focuses on gaining practical experience and income, whether in
+                        full-time, part-time, or entry-level roles.
+                    </p>
+                    <div class="text-wrapper-3">Employment</div>
+                </div>
+            </a>
+            <a href="career-paths/education" class="overlap-group-link">
             <div class="overlap">
                 <img class="rectangle" src="img/College.png" />
                 <p class="text-wrapper-2">
@@ -35,6 +39,8 @@
                 </p>
                 <div class="text-wrapper-3">College/University</div>
             </div>
+            </a>
+            <a href="career-paths/vocational" class="overlap-group-link">
             <div class="overlap-2">
                 <img class="rectangle" src="img/Vocational.png" />
                 <p class="text-wrapper-2">
@@ -43,6 +49,8 @@
                 </p>
                 <div class="text-wrapper-3">Vocational</div>
             </div>
+            </a>
+            <a href="career-paths/freelancing" class="overlap-group-link">
             <div class="overlap-3">
                 <img class="rectangle" src="img/Freelance.png" />
                 <p class="text-wrapper-2">
@@ -51,6 +59,8 @@
                 </p>
                 <div class="text-wrapper-3">Freelancing</div>
             </div>
+            </a>
+            <a href="career-paths/gap-year" class="overlap-group-link">
             <div class="overlap-4">
                 <img class="rectangle" src="img/Gapyear.png" />
                 <p class="text-wrapper-2">
@@ -59,6 +69,7 @@
                 </p>
                 <div class="text-wrapper-3">Gap Year</div>
             </div>
+            </a>
         </div>
     </div>
     @Html.Partial("_Footer")
