@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <link rel="stylesheet" href="~/css/globals.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/career-paths.css" />
+    <script src="~/js/include.js" defer></script>
+    <title>Wayfindr</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+
+    <div class="career-paths">
+        <div class="div">
+            <div class="text-wrapper">Career Paths</div>
+            <p class="p">
+                Explore various career paths available to you and find one that aligns with your skills and interests.
+            </p>
+            <div class="overlap-group">
+                <img class="rectangle" src="img/Job.png" />
+                <p class="text-wrapper-2">
+                    Starting a job or career immediately after graduation. This path focuses on gaining practical experience and
+                    income, whether in full-time, part-time, or entry-level roles.
+                </p>
+                <div class="text-wrapper-3">Employment</div>
+            </div>
+            <div class="overlap">
+                <img class="rectangle" src="img/College.png" />
+                <p class="text-wrapper-2">
+                    Pursuing higher education to earn a degree (e.g., Bachelor&#39;s). This path is ideal for careers that
+                    require formal academic qualifications and theoretical knowledge.
+                </p>
+                <div class="text-wrapper-3">College/University</div>
+            </div>
+            <div class="overlap-2">
+                <img class="rectangle" src="img/Vocational.png" />
+                <p class="text-wrapper-2">
+                    Enrolling in skills-based programs (like those offered by TESDA) to gain technical or hands-on training for
+                    specific jobs such as welding, caregiving, or computer programming.
+                </p>
+                <div class="text-wrapper-3">Vocational</div>
+            </div>
+            <div class="overlap-3">
+                <img class="rectangle" src="img/Freelance.png" />
+                <p class="text-wrapper-2">
+                    Working independently on a project or contract basis. Common in fields like writing, graphic design, and
+                    programming, freelancing allows flexibility and self-managed work.
+                </p>
+                <div class="text-wrapper-3">Freelancing</div>
+            </div>
+            <div class="overlap-4">
+                <img class="rectangle" src="img/Gapyear.png" />
+                <p class="text-wrapper-2">
+                    Taking a break before deciding on a path. This may involve travel, volunteering, self-exploration, or
+                    part-time work—used to gain clarity and confidence before committing.
+                </p>
+                <div class="text-wrapper-3">Gap Year</div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</body>
+</html>

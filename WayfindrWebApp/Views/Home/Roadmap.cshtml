@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <link rel="stylesheet" href="~/css/globals.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/roadmap.css" />
+    <script src="~/js/include.js" defer></script>
+    <title>Wayfindr</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+
+    <div class="roadmap">
+        <div class="div">
+            <!-- Title -->
+            <div class="text-wrapper">Suggested Roadmap</div>
+
+            <!-- Description -->
+            <p class="p" id="roadmap-description">
+                Here is a suggested roadmap tailored for your guidance and needs in
+                building your career.
+            </p>
+
+            <!-- Default (Generic) Content -->
+            <div class="generic-roadmap" id="default-roadmap">
+                <div class="overlap">
+                    <div class="text-wrapper-2">Take the Self-Assessment First</div>
+                    <img class="check" src="img/check.png" />
+                    <div class="text-wrapper-3">
+                        To unlock a personalized roadmap based on your interests and
+                        readiness, please complete the self-assessment test.
+                    </div>
+                </div>
+                <div class="overlap-group">
+                    <div class="text-wrapper-2">Why Take It?</div>
+                    <img class="check" src="img/check.png" />
+                    <div class="text-wrapper-3">
+                        The assessment helps us tailor steps that match your actual plans
+                        — whether it’s work, college, or a gap year.
+                    </div>
+                </div>
+                <div class="overlap-2">
+                    <div class="text-wrapper-2">Get Started</div>
+                    <img class="check" src="img/check.png" />
+                    <div class="text-wrapper-3">
+                        Click the button below to begin. It only takes a few minutes to
+                        plan your future better!
+                    </div>
+                </div>
+                <div style="position: absolute; top: 1100px; left: 102px">
+                    <a href="test-form.html"
+                       style="
+                text-decoration: none;
+                padding: 12px 24px;
+                background: #05347e;
+                color: white;
+                border-radius: 12px;
+                font-family: 'IBM Plex Sans-Medium', Helvetica, sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+                display: inline-block;
+              ">
+                        Take Assessment Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Placeholder for Dynamic Content (Freelancing, College, etc.) -->
+            <div id="dynamic-roadmap" style="display: none">
+                <!-- You can inject roadmap boxes here dynamically later -->
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial("_Footer")
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const result = localStorage.getItem("wayfindrResult");
+
+          const defaultSection = document.getElementById("default-roadmap");
+          const dynamicSection = document.getElementById("dynamic-roadmap");
+
+          if (result) {
+            // Hide default
+            defaultSection.style.display = "none";
+            dynamicSection.style.display = "block";
+
+            // Optional: Customize heading
+            document.querySelector(".text-wrapper").textContent =
+              "Your Roadmap: " + result.charAt(0).toUpperCase() + result.slice(1);
+
+            // Optional: Load content dynamically here
+          }
+        });
+    </script>
+</body>
+</html>

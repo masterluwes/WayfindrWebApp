@@ -1,0 +1,21 @@
+﻿<header class="site-header">
+    <div class="header-container">
+        <img class="logo" src="~/img/Logo.png" alt="Wayfindr Logo" />
+        <div class="brand-name">WAYFINDR</div>
+        <nav class="nav-menu">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/self-assessment" class="nav-link">Self-Assessment</a>
+            <a href="/career-paths" class="nav-link">Career Paths</a>
+            <a href="/roadmap" class="nav-link">Roadmaps</a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const path = window.location.pathname;
+      if (path.includes("self-assessment") || path.includes("test-form")) {
+        document.querySelector(".nav-self-assessment")?.classList.add("active");
+      }
+    });
+</script>

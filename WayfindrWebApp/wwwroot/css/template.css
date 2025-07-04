@@ -1,0 +1,228 @@
+.career-template {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.career-template .div {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 1479px;
+  position: relative;
+}
+
+.career-template .overlap {
+  top: 403px;
+  position: absolute;
+  width: 1192px;
+  height: 200px;
+  left: 124px;
+  background-color: #fffcf9;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.career-template .text-wrapper {
+  position: absolute;
+  width: 231px;
+  top: 64px;
+  left: 56px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #05347e;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .text-wrapper-2 {
+  position: absolute;
+  width: 772px;
+  top: 72px;
+  left: 393px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .overlap-group {
+  top: 649px;
+  position: absolute;
+  width: 1192px;
+  height: 200px;
+  left: 124px;
+  background-color: #fffcf9;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.career-template .text-wrapper-3 {
+  position: absolute;
+  width: 231px;
+  top: 76px;
+  left: 56px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #05347e;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .lorem-ipsum-lorem {
+  position: absolute;
+  width: 772px;
+  top: 32px;
+  left: 393px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .overlap-2 {
+  top: 895px;
+  position: absolute;
+  width: 1192px;
+  height: 200px;
+  left: 124px;
+  background-color: #fffcf9;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.career-template .text-wrapper-4 {
+  position: absolute;
+  width: 326px;
+  top: 76px;
+  left: 9px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #05347e;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .text-wrapper-5 {
+  position: absolute;
+  width: 772px;
+  top: 81px;
+  left: 393px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .text-wrapper-6 {
+  position: absolute;
+  width: 499px;
+  top: 95px;
+  left: 75px;
+  font-family: "IBM Plex Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #05347e;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .text-wrapper-7 {
+  position: absolute;
+  width: 499px;
+  top: 286px;
+  left: 75px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #05347e;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .p {
+  position: absolute;
+  top: 202px;
+  left: 75px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .overlap-group-2 {
+  top: 1141px;
+  position: absolute;
+  width: 1192px;
+  height: 200px;
+  left: 124px;
+  background-color: #fffcf9;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.career-template .text-wrapper-8 {
+  position: absolute;
+  width: 231px;
+  top: 55px;
+  left: 56px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #05347e;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .lorem-ipsum-lorem-2 {
+  position: absolute;
+  width: 772px;
+  top: 35px;
+  left: 393px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.career-template .list-content {
+  position: absolute;
+  width: 772px;
+  top: 32px;
+  left: 393px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+   list-style-type: disc;
+  padding-left: 20px;
+}
+
+.career-template .list-content li {
+  margin-bottom: 12px;
+}
+

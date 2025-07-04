@@ -1,0 +1,382 @@
+.test-forms {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.test-forms .div {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 3333px;
+  position: relative;
+}
+
+.test-forms .text-wrapper {
+  position: absolute;
+  width: 1109px;
+  top: 358px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .very-confident {
+  position: absolute;
+  width: 938px;
+  top: 424px;
+  left: 217px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .p {
+  position: absolute;
+  width: 1109px;
+  top: 556px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-not-sure-no {
+  position: absolute;
+  width: 938px;
+  top: 664px;
+  left: 217px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-2 {
+  position: absolute;
+  width: 1109px;
+  top: 796px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-not-yet-no-but-i {
+  position: absolute;
+  width: 938px;
+  top: 904px;
+  left: 217px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-3 {
+  position: absolute;
+  width: 1109px;
+  top: 1036px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-no-prefer-not-to {
+  position: absolute;
+  width: 938px;
+  top: 1144px;
+  left: 217px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-4 {
+  position: absolute;
+  width: 1109px;
+  top: 1402px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-i-have-a-few {
+  position: absolute;
+  width: 938px;
+  top: 1510px;
+  left: 217px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-5 {
+  position: absolute;
+  width: 1109px;
+  top: 1642px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-i-ve-researched {
+  position: absolute;
+  width: 938px;
+  top: 1750px;
+  left: 217px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-6 {
+  position: absolute;
+  width: 1109px;
+  top: 1882px;
+  left: 174px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-in-progress-not {
+  top: 1990px;
+  left: 217px;
+  position: absolute;
+  width: 938px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-7 {
+  position: absolute;
+  width: 610px;
+  top: 272px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #05347e;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-8 {
+  position: absolute;
+  width: 932px;
+  top: 125px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #05347e;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-9 {
+  position: absolute;
+  width: 610px;
+  top: 1314px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #05347e;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-10 {
+  position: absolute;
+  width: 1109px;
+  top: 2248px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-i-know-a-few-not {
+  position: absolute;
+  width: 938px;
+  top: 2356px;
+  left: 199px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-11 {
+  position: absolute;
+  width: 1109px;
+  top: 2488px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .employment-college {
+  position: absolute;
+  width: 938px;
+  top: 2596px;
+  left: 199px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-12 {
+  position: absolute;
+  width: 1109px;
+  top: 2807px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .yes-in-progress-not-2 {
+  top: 2915px;
+  left: 199px;
+  position: absolute;
+  width: 938px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .text-wrapper-13 {
+  position: absolute;
+  width: 610px;
+  top: 2162px;
+  left: 156px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #05347e;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .overlap-group {
+  left: 1057px;
+  background-color: #05347e;
+  position: absolute;
+  width: 217px;
+  height: 45px;
+  top: 3127px;
+  border-radius: 14px;
+}
+
+.test-forms .text-wrapper-14 {
+  position: absolute;
+  width: 200px;
+  top: 8px;
+  left: 9px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #fffcf9;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test-forms .overlap {
+  left: 165px;
+  border: 2px solid;
+  border-color: #444444;
+  position: absolute;
+  width: 217px;
+  height: 45px;
+  top: 3127px;
+  border-radius: 14px;
+}
+
+.test-forms .text-wrapper-15 {
+  position: absolute;
+  width: 200px;
+  top: 6px;
+  left: 7px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #444444;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.text-wrapper-14,
+.text-wrapper-15 {
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}

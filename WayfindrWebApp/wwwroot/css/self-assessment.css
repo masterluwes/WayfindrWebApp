@@ -1,0 +1,216 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+.self-assessment {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.self-assessment .overlap-group-wrapper {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 938px;
+}
+
+.self-assessment .overlap-group {
+  position: relative;
+  height: 795px;
+}
+
+.self-assessment .BG {
+  position: absolute;
+  width: 580px;
+  height: 554px;
+  top: 236px;
+  left: 737px;
+}
+
+.self-assessment .black-and-white {
+  position: absolute;
+  width: 631px;
+  height: 537px;
+  top: 258px;
+  left: 57px;
+}
+
+.self-assessment .text-wrapper {
+  position: absolute;
+  width: 618px;
+  top: 263px;
+  left: 764px;
+  font-family: "IBM Plex Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #05347e;
+  font-size: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.self-assessment .div {
+  position: absolute;
+  width: 577px;
+  top: 556px;
+  left: 764px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.self-assessment .rounded-rectangle {
+  position: absolute;
+  width: 334px;
+  height: 70px;
+  top: 720px;
+  left: 764px;
+  background-color: #479ef9;
+  border-radius: 14px;
+}
+
+.self-assessment .text-wrapper-2 {
+  position: absolute;
+  width: 279px;
+  top: 738px;
+  left: 795px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.self-assessment .wave {
+  position: absolute;
+  width: 1440px;
+  height: 359px;
+  top: 0;
+  left: 0;
+}
+
+.wave-container {
+  position: fixed;
+  width: 100%;
+  height: 500px;
+}
+
+.wave {
+  position: fixed;
+  top: 100[x];
+  left: 0;
+  width: 100%;
+  height: 359px;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.test {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.test .overlap-group-wrapper {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 938px;
+}
+
+.test .overlap-group {
+  position: relative;
+  width: 1271px;
+  height: 704px;
+  top: 110px;
+  left: 90px;
+  background-image: url(./img/background-assess-1-1.png);
+  background-size: 100% 100%;
+}
+
+.test .rectangle {
+  position: absolute;
+  width: 1024px;
+  height: 566px;
+  top: 73px;
+  left: 118px;
+  background-color: #fffcf9;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #05347e40;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.test .text-wrapper {
+  position: absolute;
+  width: 610px;
+  top: 101px;
+  left: 325px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #05347e;
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test .the-self-assessment {
+  position: absolute;
+  width: 881px;
+  top: 209px;
+  left: 189px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.test .rounded-rectangle {
+  position: absolute;
+  width: 251px;
+  height: 63px;
+  top: 531px;
+  left: 504px;
+  background-color: #479ef9;
+  border-radius: 14px;
+}
+
+.test .div {
+  position: absolute;
+  width: 172px;
+  top: 546px;
+  left: 544px;
+  font-family: "IBM Plex Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.begin-assessment-link {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.begin-assessment-link .div {
+  color: white; /* or your preferred text color */
+  font-weight: bold;
+  text-align: center;
+}
+
+.begin-assessment-link:hover .rounded-rectangle {
+  background-color: #2b5db4; /* lighter blue on hover */
+}

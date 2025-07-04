@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <link rel="stylesheet" href="~/css/globals.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/test-form.css" />
+    <script src="~/js/include.js" defer></script>
+    <title>Wayfindr</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+    <form onsubmit="return false;" id="assessmentForm">
+        <div class="test-forms">
+            <div class="div">
+                <p class="text-wrapper">1.  How confident are you in deciding what to do after graduation?</p>
+                <div class="very-confident">
+                    <label><input type="radio" name="confidence" value="very-confident" required /> Very Confident</label><br />
+                    <label><input type="radio" name="confidence" value="somewhat-confident" /> Somewhat Confident</label><br />
+                    <label><input type="radio" name="confidence" value="not-confident" /> Not Confident</label>
+                </div>
+
+                <p class="p">2.  Do you feel emotionally prepared to take the next step in your career or education?</p>
+                <div class="yes-not-sure-no">
+                    <label><input type="radio" name="emotional-preparedness" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="emotional-preparedness" value="not-sure" /> Not sure</label><br />
+                    <label><input type="radio" name="emotional-preparedness" value="no" /> No</label>
+                </div>
+
+                <p class="text-wrapper-2">3.  Have you discussed your post-graduation plans with a mentor, teacher, or guardian?</p>
+                <p class="yes-not-yet-no-but-i">
+                    <label><input type="radio" name="discussion" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="discussion" value="not-yet" /> Not yet</label><br />
+                    <label><input type="radio" name="discussion" value="no-but-want" /> No, but I want to</label>
+                </p>
+
+                <p class="text-wrapper-3">4.  Are you currently facing any personal challenges (e.g., financial, emotional, family-related) that affect your post-graduation decisions?</p>
+                <div class="yes-no-prefer-not-to">
+                    <label><input type="radio" name="personal-challenges" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="personal-challenges" value="no" /> No</label><br />
+                    <label><input type="radio" name="personal-challenges" value="prefer-not-to-say" /> Prefer not to say</label>
+                </div>
+
+                <p class="text-wrapper-4">5.  Have you already decided on a specific career path or job role to pursue after graduation?</p>
+                <p class="yes-i-have-a-few">
+                    <label><input type="radio" name="career-decision" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="career-decision" value="few-ideas" /> I have a few ideas</label><br />
+                    <label><input type="radio" name="career-decision" value="not-at-all" /> Not at all</label>
+                </p>
+
+                <p class="text-wrapper-5">6.  Do you know what skills or qualifications are required for your desired career or path?</p>
+                <p class="yes-i-ve-researched">
+                    <label><input type="radio" name="career-knowledge" value="researched" required /> Yes, I’ve researched this</label><br />
+                    <label><input type="radio" name="career-knowledge" value="general-idea" /> I have a general idea</label><br />
+                    <label><input type="radio" name="career-knowledge" value="unsure" /> No, I’m unsure</label>
+                </p>
+
+                <p class="text-wrapper-6">7.  Do you currently have a resume, portfolio, or any other application materials prepared?</p>
+                <div class="yes-in-progress-not">
+                    <label><input type="radio" name="documents" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="documents" value="in-progress" /> In progress</label><br />
+                    <label><input type="radio" name="documents" value="not-yet" /> Not yet</label>
+                </div>
+
+                <div class="text-wrapper-7">Personal Readiness</div>
+                <div class="text-wrapper-8">SELF-ASSESSMENT TEST</div>
+                <div class="text-wrapper-9">Career Planning</div>
+
+                <p class="text-wrapper-10">8.  Are you aware of the different options available to you after graduation (e.g., employment, college, skills training, freelancing)?</p>
+                <p class="yes-i-know-a-few-not">
+                    <label><input type="radio" name="awareness" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="awareness" value="some" /> I know a few</label><br />
+                    <label><input type="radio" name="awareness" value="not-really" /> Not really</label>
+                </p>
+
+                <p class="text-wrapper-11">9.  Which of the following are you most interested in pursuing first after graduation?</p>
+                <p class="employment-college">
+                    <label><input type="radio" name="interest" value="employment" required /> Employment</label><br />
+                    <label><input type="radio" name="interest" value="college" /> College/University</label><br />
+                    <label><input type="radio" name="interest" value="vocational" /> Vocational Training (e.g., TESDA)</label><br />
+                    <label><input type="radio" name="interest" value="freelancing" /> Freelancing</label><br />
+                    <label><input type="radio" name="interest" value="gap-year" /> Gap Year / Undecided</label>
+                </p>
+
+                <p class="text-wrapper-12">10.  How ready are you to begin taking action (e.g., applying for jobs, enrolling in a course)?</p>
+                <div class="yes-in-progress-not-2">
+                    <label><input type="radio" name="readiness" value="yes" required /> Yes</label><br />
+                    <label><input type="radio" name="readiness" value="in-progress" /> In progress</label><br />
+                    <label><input type="radio" name="readiness" value="not-yet" /> Not yet</label>
+                </div>
+
+                <div class="text-wrapper-13">Pathway Awareness</div>
+                <div class="overlap-group">
+                    <div class="text-wrapper-14" onclick="handleSubmit()">Submit</div>
+                </div>
+                <a href="/self-assessment" class="overlap">
+                    <div class="text-wrapper-15">Back</div>
+                </a>
+
+            </div>
+    </form>
+    </div>
+    </div>
+
+    @Html.Partial("_Footer")
+</body>
+</html>
+
+<script>
+    function validateForm() {
+      const form = document.querySelector("form");
+      const isValid = form.checkValidity();
+
+      if (!isValid) {
+        alert("Please answer all the questions before submitting.");
+      }
+
+      return isValid;
+    }
+</script>
+
+<script>
+    function handleSubmit() {
+      const form = document.getElementById("assessmentForm");
+
+      if (!form.checkValidity()) {
+        alert("Please answer all the questions before continuing.");
+        return;
+      }
+
+      // Proceed to the next page (e.g., result.html)
+      window.location.href = "test-form/result"; // Change to your actual target page
+    }
+</script>

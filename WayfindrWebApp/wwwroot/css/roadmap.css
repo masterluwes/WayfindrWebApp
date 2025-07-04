@@ -1,0 +1,147 @@
+.roadmap {
+  background-color: #fffcf9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.roadmap .div {
+  background-color: #fffcf9;
+  width: 1440px;
+  height: 1887px;
+  position: relative;
+}
+
+.roadmap .text-wrapper {
+  position: absolute;
+  width: 723px;
+  top: 140px;
+  left: 90px;
+  font-family: "IBM Plex Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #05347e;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.roadmap .p {
+  position: absolute;
+  width: 1259px;
+  top: 263px;
+  left: 90px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.roadmap .overlap {
+  top: 373px;
+  position: absolute;
+  width: 1236px;
+  height: 203px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.roadmap .text-wrapper-2 {
+  position: absolute;
+  width: 500px;
+  top: 26px;
+  left: 109px;
+  font-family: "IBM Plex Sans-Medium", Helvetica;
+  font-weight: 500;
+  color: #05347e;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.roadmap .check {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 25px;
+  left: 40px;
+  object-fit: cover;
+}
+
+.roadmap .text-wrapper-3 {
+  position: absolute;
+  width: 1000px;
+  top: 86px;
+  left: 109px;
+  font-family: "IBM Plex Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.roadmap .overlap-group {
+  top: 612px;
+  position: absolute;
+  width: 1236px;
+  height: 203px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.roadmap .overlap-2 {
+  top: 851px;
+  position: absolute;
+  width: 1236px;
+  height: 203px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.roadmap .overlap-3 {
+  top: 1090px;
+  position: absolute;
+  width: 1236px;
+  height: 203px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.roadmap .overlap-4 {
+  top: 1329px;
+  position: absolute;
+  width: 1236px;
+  height: 203px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}
+
+.roadmap .overlap-5 {
+  top: 1568px;
+  position: absolute;
+  width: 1236px;
+  height: 203px;
+  left: 102px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #d5d5d5;
+}

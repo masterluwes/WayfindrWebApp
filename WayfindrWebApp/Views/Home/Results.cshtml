@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <link rel="stylesheet" href="~/css/globals.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/result.css" />
+    <script src="~/js/include.js" defer></script>
+    <title>Wayfindr</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+    <div class="test-result">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+                <div class="rectangle"></div>
+                <p class="text-wrapper">Great Job on Completing Your Self-Assessment!</p>
+                <p class="you-ve-taken-an">
+                    You&#39;ve taken an important step toward planning your future. Based on your answers, you&#39;re now ready
+                    to explore the next phase of your journey.<br /><br />What’s next? Head over to the Career Paths section to
+                    discover the different opportunities available to you — whether it’s employment, college, training, or
+                    freelancing.<br /><br />Then, check out your Suggested Roadmap for practical steps tailored to your goals.
+                    Take your time, reflect, and remember: your path is yours to shape.
+                </p>
+                <div class="rounded-rectangle"></div>
+                <div class="div">Go to Career Paths</div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/png" href="img/Logo.png" />
+    <link rel="stylesheet" href="~/css/globals.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/self-assessment.css" />
+    <script src="~/js/include.js" defer></script>
+    <title>Wayfindr</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+
+    <!-- <div class="wave-container">
+      <img class="wave" src="img/background-assess.png" />
+    </div> -->
+
+    <div class="self-assessment">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+                <img class="BG" src="img/BG 1.png" />
+                <img class="black-and-white" src="img/Girl.png" />
+                <div class="text-wrapper">Self-Assessment</div>
+                <p class="div">
+                    Evaluate your readiness and next steps to determine your ideal path
+                    after graduation. Gain insights into your strengths, interests, and
+                    goals to make confident, informed career decisions.
+                </p>
+                <a href="#assessment-section" class="start-assessment-link">
+                    <div class="rounded-rectangle"></div>
+                    <div class="text-wrapper-2">Start Assessment</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="test" id="assessment-section">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+                <div class="rectangle"></div>
+                <div class="text-wrapper">Self-Assessment</div>
+                <p class="the-self-assessment">
+                    The Self-Assessment is a guided questionnaire designed to help you
+                    understand your current level of career readiness, identify your
+                    personal goals, and explore opportunities that align with your
+                    interests, strengths, and preferences. This tool serves as your
+                    starting point for making informed decisions about your future after
+                    graduation.<br /><br />By answering a series of questions, you’ll
+                    receive personalized insights and suggestions that can help you
+                    discover suitable career paths and plan your next steps with clarity
+                    and confidence.
+                </p>
+                <a href="self-assessment/test-form" class="start-assessment-link">
+
+                    <div class="rounded-rectangle"></div>
+                    <div class="div">Begin Now</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Self-Assessment Test Section -->
+    <div id="test-form-section" class="test-forms">
+        <div class="div">
+            <!-- Place your full test-form HTML structure here (radio buttons, questions, etc.) -->
+            <!-- For cleanliness, just paste everything from <div class="test-forms"> in test-form.html -->
+        </div>
+    </div>
+</body>
+
+@Html.Partial("_Footer")
+</html>
