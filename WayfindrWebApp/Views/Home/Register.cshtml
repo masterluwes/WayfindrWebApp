@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model WayfindrWebApp.Models.User
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,29 +28,40 @@
             <div class="text-wrapper-3">WAYFINDR</div>
             <div class="text-wrapper-4">Sign up to Wayfindr</div>
             <div class="text-wrapper-5">Please enter your details</div>
-            <!-- Username -->
-            <div class="text-wrapper-6">Username</div>
-            <input type="text"
-                   class="rectangle"
-                   placeholder="Enter your username" />
+            <form asp-controller="Auth" asp-action="Register" method="post">
+                <!-- Username -->
+                <div class="text-wrapper-6">Username</div>
+                <input asp-for="Username"
+                       class="rectangle"
+                       placeholder="Enter your username" />
+                <span asp-validation-for="Username" class="text-danger"></span>
 
-            <!-- Email -->
-            <div class="text-wrapper-7">Email</div>
-            <input type="email"
-                   class="rectangle-2"
-                   placeholder="Enter your email" />
+                <!-- Email -->
+                <div class="text-wrapper-7">Email</div>
+                <input asp-for="Email"
+                       class="rectangle-2"
+                       placeholder="Enter your email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
 
-            <!-- Password -->
-            <div class="text-wrapper-8">Password</div>
-            <input type="password"
-                   class="rectangle-3"
-                   placeholder="Enter your password" />
+                <!-- Password -->
+                <div class="text-wrapper-8">Password</div>
+                <input asp-for="PasswordHash"
+                       type="password"
+                       class="rectangle-3"
+                       placeholder="Enter your password" />
+                <span asp-validation-for="PasswordHash" class="text-danger"></span>
 
-            <!-- Confirm Password -->
-            <div class="text-wrapper-9">Confirm Password</div>
-            <input type="password"
-                   class="rectangle-4"
-                   placeholder="Confirm your password" />
+                <!-- Confirm Password -->
+                <div class="text-wrapper-9">Confirm Password</div>
+                <input name="ConfirmPassword"
+                       type="password"
+                       class="rectangle-4"
+                       placeholder="Confirm your password" />
+
+                <button type="submit" class="overlap-group">
+                    <div class="text-wrapper-2">Sign Up</div>
+                </button>
+            </form>
         </div>
     </div>
 </body>

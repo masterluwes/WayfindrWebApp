@@ -419,7 +419,7 @@
         height: 47px;
         top: 817px;
         left: 1175px;
-        background-color: #479ef9;
+/*        background-color: #479ef9;*/
         border-radius: 14px;
     }
 
@@ -513,3 +513,12 @@
 }
 
 
+.text-wrapper-17 {
+    position: absolute;
+    width: 211px;
+    height: 47px;
+    top: 817px;
+    left: 1175px;
+    background-color: #479ef9;
+    border-radius: 14px;
+}

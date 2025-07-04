@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using WayfindrWebApp.Data;
 using WayfindrWebApp.Models;
 
@@ -13,22 +14,31 @@ namespace WayfindrWebApp.Controllers
             _context = context;
         }
 
-        // ✅ PLACE THIS METHOD HERE (GET: /User/Profile/{id})
-        public IActionResult Profile(int id)
+        // GET: /profile
+        public IActionResult Profile()
         {
-            var user = _context.Users.FirstOrDefault(u => u.UserId == id);
+            // 🔑 Get user ID from session
+            int? userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Login", "Auth"); // or wherever your login is
+
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId.Value);
             if (user == null)
                 return NotFound();
 
-            return View(user); // will load Views/User/Profile.cshtml with the user data
+            return View(user); // loads Views/User/Profile.cshtml
         }
 
         [HttpPost]
         public IActionResult Save(User user)
         {
+            int? userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Login", "Auth");
+
             if (ModelState.IsValid)
             {
-                var existingUser = _context.Users.FirstOrDefault(u => u.UserId == user.UserId);
+                var existingUser = _context.Users.FirstOrDefault(u => u.UserId == userId.Value);
                 if (existingUser != null)
                 {
                     existingUser.FirstName = user.FirstName;
@@ -48,7 +58,7 @@ namespace WayfindrWebApp.Controllers
                     TempData["Message"] = "Profile updated successfully!";
                 }
 
-                return RedirectToAction("Profile", new { id = user.UserId });
+                return RedirectToAction("Profile");
             }
 
             return View("Profile", user);
