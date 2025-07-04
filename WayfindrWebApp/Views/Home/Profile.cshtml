@@ -81,9 +81,10 @@
             <div class="text-wrapper-14">Assessment/s:</div>
             <div class="text-wrapper-15">Last modified:</div>
             <div class="text-wrapper-16">Current track:</div>
-            <div class="no-of-assessments">{no-of-assessments}</div>
-            <div class="date">{date}</div>
-            <div class="current-career">{current career}</div>
+            <div class="no-of-assessments" id="assessments"></div>
+            <div class="date" id="last-modified"></div>
+            <div class="current-career" id="career-track"></div>
+
             
             <a href="/">
                 <div class="overlap-2">
@@ -170,3 +171,23 @@
         }
     };
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Number of assessments
+      const assessments = JSON.parse(localStorage.getItem("assessmentsAnswered")) || [];
+      document.querySelector('.no-of-assessments').textContent = assessments.length;
+
+      // Current date
+      const currentDate = new Date();
+      document.querySelector('.date').textContent = currentDate.toLocaleDateString('en-PH', {
+        year: 'numeric', month: 'long', day: 'numeric'
+      });
+
+      // Display result
+      const result = localStorage.getItem("assessmentResult") || "Not yet assessed";
+      document.querySelector('.current-career').textContent = result;
+    });
+</script>
+
+

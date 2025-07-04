@@ -45,7 +45,7 @@
                 study: {
                     title: "🎓 Pursuing higher education may be your ideal next step.",
                     message: "Your responses suggest a strong interest in learning more, gaining qualifications, and exploring your interests in depth. Whether it's university or a specialized program, this route will open doors to long-term career success. Visit the “Study” career path section for tips on school applications, scholarships, and finding the right course.",
-                    path: "/career-paths/study"
+                    path: "/career-paths/education"
                 },
                 vocational: {
                     title: "🛠️ You appear suited for a hands-on, skill-based learning path.",
@@ -80,6 +80,14 @@
                 document.getElementById("goToCareerBtn").href = "/career-paths";
             }
         });
+                // Example: storing the result from the assessment
+        localStorage.setItem("assessmentResult", "study"); // or "work", "freelance", etc.
+
+        // Optional: keep track of number of assessments
+        let assessments = JSON.parse(localStorage.getItem("assessmentsAnswered")) || [];
+        assessments.push({ date: new Date().toISOString(), result: "study" });
+        localStorage.setItem("assessmentsAnswered", JSON.stringify(assessments));
+
     </script>
 </body>
 </html>

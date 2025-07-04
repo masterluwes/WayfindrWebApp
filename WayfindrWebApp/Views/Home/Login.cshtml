@@ -24,13 +24,11 @@
 
             <!-- Email -->
             <div class="text-wrapper-4">Email</div>
-            <input type="email" class="rectangle" placeholder="Enter your email" />
+            <input type="email" id="login-email" class="rectangle" placeholder="Enter your email" />
 
             <!-- Password -->
             <div class="text-wrapper-5">Password</div>
-            <input type="password"
-                   class="rectangle-2"
-                   placeholder="Enter your password" />
+            <input type="password" id="login-password" class="rectangle-2" placeholder="Enter your password" />
 
             <div class="overlap">
                 <div class="text-wrapper-6">Forgot Password</div>
@@ -45,11 +43,57 @@
                     </a>
                 </p>
             </div>
-            <a href="/" class="overlap-3">
-                <div class="rectangle-4"></div>
-                <div class="text-wrapper-9">Sign In</div>
-            </a>
+            <form id="loginForm">
+                <button type="submit" class="overlap-3">
+                    <div class="rectangle-4"></div>
+                    <div class="text-wrapper-9">Sign In</div>
+                </button>
+            </form>
+
         </div>
     </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("login-email").value.trim();
+            const password = document.getElementById("login-password").value;
+
+            const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
+
+            if (!storedUser) {
+                alert("No account found. Please register first.");
+                return;
+            }
+
+            if (storedUser.email === email && storedUser.password === password) {
+                alert("Login successful!");
+
+                // Redirect to homepage or dashboard
+                window.location.href = "/";
+            } else {
+                alert("Invalid email or password.");
+            }
+        });
+    </script>
+    <script>
+        document.querySelector(".overlap-3").addEventListener("click", function () {
+            const email = document.querySelector("input[type='email']").value;
+            const password = document.querySelector("input[type='password']").value;
+
+            // Load users from JSON (simulate JSON file with localStorage)
+            const users = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+            const user = users.find(u => u.Email === email && u.PasswordHash === password);
+
+            if (user) {
+                localStorage.setItem("currentUser", email); // Set current user
+                window.location.href = "/profile"; // Redirect to profile
+            } else {
+                alert("Invalid credentials.");
+            }
+        });
+    </script>
+
 </body>
 </html>

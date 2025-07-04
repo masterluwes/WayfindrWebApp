@@ -28,24 +28,24 @@
             <div class="text-wrapper-3">WAYFINDR</div>
             <div class="text-wrapper-4">Sign up to Wayfindr</div>
             <div class="text-wrapper-5">Please enter your details</div>
-            <form asp-controller="Auth" asp-action="Register" method="post">
+            <form id="registerForm">
                 <!-- Username -->
                 <div class="text-wrapper-6">Username</div>
-                <input asp-for="Username"
+                <input asp-for="Username" id="username"
                        class="rectangle"
                        placeholder="Enter your username" />
                 <span asp-validation-for="Username" class="text-danger"></span>
 
                 <!-- Email -->
                 <div class="text-wrapper-7">Email</div>
-                <input asp-for="Email"
+                <input asp-for="Email" id="email"
                        class="rectangle-2"
                        placeholder="Enter your email" />
                 <span asp-validation-for="Email" class="text-danger"></span>
 
                 <!-- Password -->
                 <div class="text-wrapper-8">Password</div>
-                <input asp-for="PasswordHash"
+                <input asp-for="PasswordHash" id="password"
                        type="password"
                        class="rectangle-3"
                        placeholder="Enter your password" />
@@ -53,7 +53,7 @@
 
                 <!-- Confirm Password -->
                 <div class="text-wrapper-9">Confirm Password</div>
-                <input name="ConfirmPassword"
+                <input name="ConfirmPassword" id="confirmPassword"
                        type="password"
                        class="rectangle-4"
                        placeholder="Confirm your password" />
@@ -66,3 +66,63 @@
     </div>
 </body>
 </html>
+
+<script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (!username || !email || !password || !confirmPassword) {
+            alert("Please fill out all fields.");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        // Save user as JSON in localStorage
+        const user = {
+            username: username,
+            email: email,
+            password: password
+        };
+
+        // Save to localStorage (you could also use sessionStorage if temporary)
+        localStorage.setItem("registeredUser", JSON.stringify(user));
+
+        alert("Registration successful!");
+
+        // Optionally redirect to login
+        window.location.href = "login";
+    });
+</script>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const user = {
+            Username: document.querySelector("input[name='Username']").value,
+            Email: document.querySelector("input[name='Email']").value,
+            PasswordHash: document.querySelector("input[name='PasswordHash']").value
+        };
+
+        const users = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+        const existing = users.find(u => u.Email === user.Email);
+
+        if (existing) {
+            alert("Email already registered.");
+        } else {
+            users.push(user);
+            localStorage.setItem("registeredUsers", JSON.stringify(users));
+            alert("Registration successful!");
+            window.location.href = "/login";
+        }
+    });
+</script>
+
