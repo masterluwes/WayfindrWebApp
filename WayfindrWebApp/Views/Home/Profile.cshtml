@@ -16,41 +16,93 @@
     <div class="profile">
         <div class="div">
             <div class="text-wrapper">YOUR PROFILE</div>
-            <div class="rectangle"></div>
+
+            <!-- Profile Picture Preview -->
+            <img id="profile-picture"
+                 class="rectangle"
+                 src="img/default-profile.png"
+                 alt="Profile Picture" />
+
+            <!-- Upload Button -->
             <div class="overlap-group">
-                <div class="rectangle-2"></div>
-                <div class="text-wrapper-2">Upload a Photo</div>
+                <label for="upload-input" class="rectangle-2">
+                    <div class="text-wrapper-2">Upload a Photo</div>
+                </label>
+                <input type="file"
+                       id="upload-input"
+                       accept="image/png, image/jpeg"
+                       style="display: none" />
             </div>
             <div class="overlap">
-                <div class="rectangle-3"></div>
-                <div class="rectangle-4"></div>
                 <div class="text-wrapper-3">Profile Information</div>
+
+                <!-- First Name -->
                 <div class="text-wrapper-4">First Name</div>
-                <div class="rectangle-5"></div>
+                <input type="text"
+                       class="rectangle-3"
+                       placeholder="Enter First Name" />
+
+                <!-- Username -->
                 <div class="text-wrapper-5">Username</div>
-                <div class="rectangle-6"></div>
+                <input type="text" class="rectangle-5" placeholder="Enter Username" />
+
+                <!-- Gender -->
                 <div class="text-wrapper-6">Gender</div>
+                <select class="rectangle-6">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+
+                <!-- Last Name -->
                 <div class="text-wrapper-7">Last Name</div>
-                <div class="rectangle-7"></div>
-                <div class="rectangle-8"></div>
+                <input type="text"
+                       class="rectangle-4"
+                       placeholder="Enter Last Name" />
+
                 <div class="text-wrapper-8">Contact Information</div>
+
+                <!-- Email -->
                 <div class="text-wrapper-9">Email</div>
-                <div class="rectangle-9"></div>
+                <input type="email" class="rectangle-7" placeholder="Enter Email" />
+
+                <!-- New Password -->
                 <div class="text-wrapper-10">New Password</div>
-                <div class="rectangle-10"></div>
+                <input type="password"
+                       class="rectangle-9"
+                       placeholder="Enter New Password" />
+
+                <!-- Confirm New Password -->
                 <div class="text-wrapper-11">Confirm New Password</div>
+                <input type="password"
+                       class="rectangle-10"
+                       placeholder="Confirm Password" />
+
+                <!-- Contact Number -->
                 <div class="text-wrapper-12">Contact Number</div>
+                <input type="tel"
+                       class="rectangle-8"
+                       placeholder="Enter Contact Number" />
             </div>
+
             <div class="text-wrapper-13">Current Stats</div>
             <div class="text-wrapper-14">Assessment/s:</div>
             <div class="text-wrapper-15">Last modified:</div>
             <div class="text-wrapper-16">Current track:</div>
-            <div class="no-of-assessments">{"{"}no-of-assessments{"}"}</div>
-            <div class="date">{"{"}date{"}"}</div>
-            <div class="current-career">{"{"}current career{"}"}</div>
+            <div class="no-of-assessments">{no-of-assessments}</div>
+            <div class="date">{date}</div>
+            <div class="current-career">{current career}</div>
             <div class="div-wrapper"><div class="text-wrapper-17">Save</div></div>
-            <div class="overlap-2"><div class="text-wrapper-18">Back</div></div>
-            <div class="overlap-3"><div class="text-wrapper-19">Logout</div></div>
+            <a href="index">
+                <div class="overlap-2">
+                    <div class="text-wrapper-18">Back</div>
+                </div>
+            </a>
+            <a href="login" class="overlap-3">
+                <div class="text-wrapper-19">Logout</div>
+            </a>
         </div>
     </div>
     @Html.Partial("_Footer")

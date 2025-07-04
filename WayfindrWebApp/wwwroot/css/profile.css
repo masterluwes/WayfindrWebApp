@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: 4%;
+    margin-top: 2%;
 }
 
     .profile .div {
@@ -56,6 +56,7 @@
         border-radius: 10px;
         border: 1px solid;
         border-color: #05347e73;
+        cursor: pointer;
     }
 
     .profile .text-wrapper-2 {
@@ -70,6 +71,7 @@
         text-align: center;
         letter-spacing: 0;
         line-height: normal;
+        margin-left: -29px;
     }
 
     .profile .overlap {
@@ -484,3 +486,30 @@
         letter-spacing: 0;
         line-height: normal;
     }
+
+.rectangle-3,
+.rectangle-4,
+.rectangle-5,
+.rectangle-6,
+.rectangle-7,
+.rectangle-8,
+.rectangle-9,
+.rectangle-10 {
+    padding-left: 16px;
+    font-size: 14px;
+}
+.rectangle-3::placeholder,
+.rectangle-4::placeholder,
+.rectangle-5::placeholder,
+.rectangle-6::placeholder,
+.rectangle-7::placeholder,
+.rectangle-8::placeholder,
+.rectangle-9::placeholder,
+.rectangle-10::placeholder {
+    
+    font-size: 14px;
+    color: #999; /* Optional: customize placeholder color */
+    opacity: 1; /* Ensures visibility */
+}
+
+
